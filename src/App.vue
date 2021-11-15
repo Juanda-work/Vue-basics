@@ -1,10 +1,14 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
+  <counter></counter>
 </template>
 
 <script>
+import Counter from './components/Counter.vue'
+
 
 export default {
+  components: { Counter },
   name: 'App',
  
 }
