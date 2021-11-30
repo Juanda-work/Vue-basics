@@ -2,7 +2,7 @@
   <h2>{{customTitle}}</h2>
   <p> {{counter}} <sup>2</sup> = {{ squareCounter }}</p>
 
-  <div>
+  <div class="buttons-container">
         <!-- La arroba reemplaza v-on: -->
         <button @click="decrease">-1</button>
         <button @click="increase">+1</button>

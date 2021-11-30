@@ -1,4 +1,5 @@
 <template>
+    <!-- el 'src' tiene un shortcut de "v-bind:src" -->
     <img v-if="image" :src="image" alt="bg">
     <div class="bg-dark"></div>
 
