@@ -8,5 +8,7 @@ describe('Counter Component', () => {
         const wrapper = shallowMount(Counter)
         expect( wrapper.html() ).toMatchSnapshot()
     })
+
+    // El comando npm para que actualice el snapshot es: npm run test:unit -- -u
     
 })
