@@ -1,5 +1,6 @@
 <template>
   <h2>{{customTitle}}</h2>
+  <p data-testid="counter">{{counter}}</p>
   <p> {{counter}} <sup>2</sup> = {{ squareCounter }}</p>
 
   <div class="buttons-container">
