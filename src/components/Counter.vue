@@ -1,21 +1,21 @@
 <template>
-  <h2>{{customTitle}}</h2>
-  <p data-testid="counter">{{counter}}</p>
-  <p> {{counter}} <sup>2</sup> = {{ squareCounter }}</p>
+    <div class="buttons-container">
+        <h2>{{customTitle}}</h2>
+        <p data-testid="counter">{{counter}}</p>
+        <p> {{counter}} <sup>2</sup> = {{ squareCounter }}</p>
 
-  <div class="buttons-container">
         <!-- La arroba reemplaza v-on: -->
-        <button @click="decrease">-1</button>
         <button @click="increase">+1</button>
-  </div>
+        <button data-testId="decreaseBtn" @click="decrease">-1</button>
+    </div>
 </template>
 
 <script>
     export default {
         // props: ['title', 'start'],
         props: {
-            'title' : String,
-            'start' : {
+            title : String,
+            start : {
                 type: Number,
                 // required: true,
                 default: 100,
@@ -68,7 +68,6 @@
         cursor: pointer;
         margin: 0 5px;
         padding: 5px 15px;
-        transition: 0.3s ease-in-out;
     }
     button:hover{
         background-color: lightseagreen;

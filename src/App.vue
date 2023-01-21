@@ -1,18 +1,20 @@
 <template>
   <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-  <!-- <counter :start="2"/> -->
-  <Indecision />
+  <!-- :start === v-bind:start y sirve para enviar expresiones de JS 
+    * y no literalmente lo que se escriba en las comillas -->
+  <counter :start="2" title="Contadorcito" />
+  <!-- <Indecision /> -->
 </template>
 
 <script>
-// import Counter from './components/Counter.vue'
-import Indecision from './components/Indecision.vue'
+import Counter from '@/components/Counter.vue'
+// import Indecision from './components/Indecision.vue'
 
 
 export default {
   components: { 
-    // Counter,
-    Indecision
+    Counter,
+    // Indecision
   },
   name: 'App',
  
