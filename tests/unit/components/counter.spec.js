@@ -52,5 +52,30 @@ describe('Counter Component', () => {
         expect(value).toBe('101')
     })
 
+    test('debe establecer valor por defecto', () => {
+        //! así se leen las props.
+        const { start } = wrapper.props();
+        
+        // otra forma de obtener la variable star.
+        // const start2 = wrapper.props('start');
+
+        const value = wrapper.find("[data-testid='counter'").text();
+        expect( Number(value)).toBe(start)
+    })
+
+    test('debe mostrar la prop title', () => {
+        // Por motivos de esta prueba, voy a necesitar crear una instancia de wrapper independiente. 
+        // (No como el resto de las pruebas que tiran del mismo wrapper)
+        const wrapper = shallowMount(Counter, {
+            props:{
+                title: 'Hola Mundo', // title tal y como se escribe en el componente
+                // start: 7
+            }
+        });
+        expect( wrapper.find('h2').text() ).toBe('Hola Mundo')
+    })
+
+
+
     
 })
